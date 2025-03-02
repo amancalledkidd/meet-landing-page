@@ -9,23 +9,49 @@
   <title>Frontend Mentor | Meet landing page</title>
 </head>
 <body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+  <header>
+    <img src="./assets/logo.svg" alt="Meet logo">
+  </header>
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width:768px)" srcset="./assets/desktop/image-hero-left" />
+        <img src="./assets/tablet/image-hero.png" alt="Faces of users"/>
+      </picture>
+      <article>
+        <h1>Group Chat for Everyone</h1>
+        <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+        <button>Download v1.3</button>
+        <button>What is it?</button>
+      </article>
+      <picture>
+        <source media="(min-width:768px)" srcset="./assets/desktop/image-hero-right" />
+        <img src="" alt=""/>
+      </picture>
+    </section>
 
-  Download v1.3
-  What is it?
-
-  01
-  Built for modern use
-
-  Smarter meetings, all in one place
-
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
+    <section class="main-content">
+      <img src="./assets/number-1.svg" alt=""/>
+      <div class="image-grid">
+        <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="Woman in video call"/>
+        <img src="./assets/desktop/image-women-videochatting.jpg" alt="Three Women voice chatting on the phone">
+        <img src="./assets/desktop/image-men-in-meeting.jpg" alt="Men on video meeting" />
+        <img src="./assets/desktop/image-man-texting.jpg" alt="Man texting using the meet app" />
+      </div>
+      <article>
+        <p>Built for modern use</p>
+        <h2>Smarter meetings, all in one place</h2>
+        <p>Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <img src="./assets/number-2.svg" alt="">
+    <article class="footer-cta">
+      <h2>Experience more together</h2>
+      <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <button>Download v1.3</button>
+    </article>
+  </footer>
 </body>
 </html>
