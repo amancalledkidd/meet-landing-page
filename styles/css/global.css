@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.text-1 {
+  font-size: 4rem;
+}
+
+.text-2 {
+  font-size: 2.5rem;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1240,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,12,1.125,1240,16,1.25,5,0,&s=0.5|0.25,1.5|2|2.5|3|4|5|7,s-l&g=s,l,xl,12 */
+:root {
+  --space-2xs: clamp(0.1875rem, 0.1658rem + 0.1087vw, 0.25rem);
+  --space-xs: clamp(0.375rem, 0.3315rem + 0.2174vw, 0.5rem);
+  --space-s: clamp(0.75rem, 0.663rem + 0.4348vw, 1rem);
+  --space-m: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+  --space-l: clamp(1.5rem, 1.3261rem + 0.8696vw, 2rem);
+  --space-xl: clamp(1.875rem, 1.6576rem + 1.087vw, 2.5rem);
+  --space-2xl: clamp(2.25rem, 1.9891rem + 1.3043vw, 3rem);
+  --space-3xl: clamp(3rem, 2.6522rem + 1.7391vw, 4rem);
+  --space-4xl: clamp(3.75rem, 3.3152rem + 2.1739vw, 5rem);
+  --space-5xl: clamp(5.25rem, 4.6413rem + 3.0435vw, 7rem);
+  --space-2xs-xs: clamp(0.1875rem, 0.0788rem + 0.5435vw, 0.5rem);
+  --space-xs-s: clamp(0.375rem, 0.1576rem + 1.087vw, 1rem);
+  --space-s-m: clamp(0.75rem, 0.4891rem + 1.3043vw, 1.5rem);
+  --space-m-l: clamp(1.125rem, 0.8207rem + 1.5217vw, 2rem);
+  --space-l-xl: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem);
+  --space-xl-2xl: clamp(1.875rem, 1.4837rem + 1.9565vw, 3rem);
+  --space-2xl-3xl: clamp(2.25rem, 1.6413rem + 3.0435vw, 4rem);
+  --space-3xl-4xl: clamp(3rem, 2.3043rem + 3.4783vw, 5rem);
+  --space-4xl-5xl: clamp(3.75rem, 2.6196rem + 5.6522vw, 7rem);
+}
+
+:root {
+  --step--2: clamp(0.5208rem, 0.5062rem + 0.073vw, 0.5628rem);
+  --step--1: clamp(0.625rem, 0.5815rem + 0.2177vw, 0.7502rem);
+  --step-0: clamp(0.75rem, 0.663rem + 0.4348vw, 1rem);
+  --step-1: clamp(0.9rem, 0.7494rem + 0.753vw, 1.333rem);
+  --step-2: clamp(1.08rem, 0.8376rem + 1.212vw, 1.7769rem);
+  --step-3: clamp(1.296rem, 0.9229rem + 1.8654vw, 2.3686rem);
+  --step-4: clamp(1.5552rem, 0.9979rem + 2.7863vw, 3.1573rem);
+  --step-5: clamp(1.8662rem, 1.0515rem + 4.0739vw, 4.2087rem);
+  --step-6: clamp(2.2395rem, 1.0671rem + 5.8622vw, 5.6102rem);
+}
+
+body {
+  font-family: "Red Hat Display", serif;
+  font-size: var(--step-0);
+  color: #28283D;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--step-5);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: var(--step-4);
+  font-weight: 800;
+}
+
+p {
+  color: #87879D;
+  max-width: 55ch;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: var(--space-3xl);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-s);
+  margin: 4rem 0;
+}
+.image-grid img {
+  border-radius: 8px;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-s));
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+  align-items: var(--cluster-vertical-alignment, center);
+}
+
+.button, .button__cyan, .button__purple {
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 29px;
+  padding: var(--space-m) var(--space-2xl);
+  margin: var(--space-2xs);
+}
+.button:active, .button__cyan:active, .button__purple:active {
+  transform: scale(0.95);
+}
+.button__purple {
+  background-color: #855FB1;
+}
+.button__cyan {
+  background-color: #4D96A9;
+}
+
+.section-number {
+  display: flex;
+  justify-content: center;
+}
+
+#section-two {
+  position: relative;
+  margin: 0;
+  bottom: -2rem;
+  z-index: 2;
+}
+
+footer {
+  color: white;
+  background-image: linear-gradient(rgba(77, 151, 169, 0.8705882353), rgba(77, 151, 169, 0.8705882353)), url("../../assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: var(--space-3xl) var(--space-l);
+  position: relative;
+}
+footer p {
+  color: #FAFAFA;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.lt-purple {
+  color: #D9B8FF;
+}
+
+.lt-cyan {
+  color: #8FE3F9;
+}
+
+.wrapper {
+  padding: var(--step-5);
+  position: relative;
+}
+
+.text-3 {
+  color: #4D96A9;
+  font-size: var(--step-0);
+  letter-spacing: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=global.css.map */

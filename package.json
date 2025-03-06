@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "npx sass styles/scss/global.scss styles/css/global.css --watch",
+    "build": "npx sass styles/scss/global.scss styles/css/global.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.85.1"
+  },
+  "dependencies": {
+    "utopia-core-scss": "^1.2.1"
+  }
+}

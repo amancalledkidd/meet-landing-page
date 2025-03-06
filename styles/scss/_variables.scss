@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+  
+
+
+// COLORS
+
+// Cyan
+$clr-cyan-300: #8FE3F9;
+$clr-cyan-600: #4D96A9;
+
+// Purple
+$clr-purple-300: #D9B8FF;
+$clr-purple-600: #855FB1;
+
+// Slate (Grey)
+$clr-slate-300: #D1D1DF;
+$clr-slate-600: #87879D;
+$clr-slate-900: #28283D;
+
+// White 
+$clr-white: #FAFAFA;
+
+
+// TYPOGRAPHY
+
+//fonts
+$font-family: "Red Hat Display", serif;
+
+//font sizes
+$fs-base: 1rem;
+$line-height: 110%;
+$letter-spacing: 4px;
+
+//text presets
+.text-1 {
+    font-size: 4rem;
+}
+
+.text-2 {
+    font-size: 2.5rem;
+}
+
+.text-3 {
+
+}
+
+
+// SPACING
+
+$spacing-50: 0.25rem;
+$spacing-100: 0.5rem;
+$spacing-200: 1rem;
+$spacing-300: 1.5rem;
+$spacing-400: 2rem;
+$spacing-500: 2.5rem;
+$spacing-600: 3rem;
+$spacing-700: 3.5rem;
+$spacing-800: 4rem;
+$spacing-900: 4.5rem;
+$spacing-1000: 5rem;
+$spacing-1400: 7rem;
+
