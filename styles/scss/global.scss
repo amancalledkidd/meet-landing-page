@@ -1,5 +1,6 @@
 @use './reset';
 @use './variables' as *;
+@use './blocks/button';
 @use '../../node_modules/utopia-core-scss/src/utopia' as utopia;
 
 /* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1240,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -63,8 +64,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: var(--space-3xl);
+    margin-top: var(--space-2xl);
     margin-bottom: var(--space-xl);
+}
+
+footer {
+    color: white;
+    background-image: linear-gradient(#4d97a9de, #4d97a9de), url('../../assets/mobile/image-footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--space-3xl) var(--space-xl);
+    position: relative;
+
+    p {
+        color: $clr-white;
+    }
+
 }
 
 
@@ -102,7 +117,6 @@ header {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         gap: 1rem;
-        // text-align: left;
         justify-items: center;
         align-items: flex-start;
         --flow-space: 0;
@@ -124,37 +138,7 @@ header {
 }
 
 // Block
-.button {
-    font-size: var(--step-1);
-    font-weight: 700;
-    color: $clr-white;
-    border: none;
-    border-radius: 29px;
-    padding: var(--space-m) var(--space-2xl);
-    margin: var(--space-2xs);
 
-    &:active {
-        transform: scale(0.95);
-      }
-
-    &__purple {
-        @extend .button;
-        background-color: $clr-purple-600;
-
-        &:hover {
-            background-color: #B18BDD;
-        }
-    }
-
-    &__cyan {
-        @extend .button;
-        background-color: $clr-cyan-600;
-
-        &:hover {
-            background-color: #71C0D4;
-        }
-    }
-}
 
 .section-number {
     display: flex;
@@ -168,19 +152,7 @@ header {
 }
 
 
-footer {
-    color: white;
-    background-image: linear-gradient(#4d97a9de, #4d97a9de), url('../../assets/mobile/image-footer.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: var(--space-3xl) var(--space-xl);
-    position: relative;
 
-    p {
-        color: $clr-white;
-    }
-
-}
 
 // Utilities 
 

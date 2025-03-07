@@ -81,6 +81,31 @@ textarea:not([rows]) {
   font-size: 2.5rem;
 }
 
+.button, .button__cyan, .button__purple {
+  font-size: var(--step-1);
+  font-weight: 700;
+  color: #FAFAFA;
+  border: none;
+  border-radius: 29px;
+  padding: var(--space-m) var(--space-2xl);
+  margin: var(--space-2xs);
+}
+.button:active, .button__cyan:active, .button__purple:active {
+  transform: scale(0.95);
+}
+.button__purple {
+  background-color: #855FB1;
+}
+.button__purple:hover {
+  background-color: #B18BDD;
+}
+.button__cyan {
+  background-color: #4D96A9;
+}
+.button__cyan:hover {
+  background-color: #71C0D4;
+}
+
 /* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1240,16,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 /* @link https://utopia.fyi/space/calculator?c=320,12,1.125,1240,16,1.25,5,0,&s=0.5|0.25,1.5|2|2.5|3|4|5|7,s-l&g=s,l,xl,12 */
 :root {
@@ -146,8 +171,20 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-2xl);
   margin-bottom: var(--space-xl);
+}
+
+footer {
+  color: white;
+  background-image: linear-gradient(rgba(77, 151, 169, 0.8705882353), rgba(77, 151, 169, 0.8705882353)), url("../../assets/mobile/image-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: var(--space-3xl) var(--space-xl);
+  position: relative;
+}
+footer p {
+  color: #FAFAFA;
 }
 
 @media (min-width: 768px) {
@@ -191,35 +228,10 @@ header {
   .cluster p {
     align-self: center;
   }
-  .cluster .button, .cluster .button__cyan, .cluster .button__purple {
+  .cluster .button {
     justify-self: center;
     align-self: center;
   }
-}
-
-.button, .button__cyan, .button__purple {
-  font-size: var(--step-1);
-  font-weight: 700;
-  color: #FAFAFA;
-  border: none;
-  border-radius: 29px;
-  padding: var(--space-m) var(--space-2xl);
-  margin: var(--space-2xs);
-}
-.button:active, .button__cyan:active, .button__purple:active {
-  transform: scale(0.95);
-}
-.button__purple {
-  background-color: #855FB1;
-}
-.button__purple:hover {
-  background-color: #B18BDD;
-}
-.button__cyan {
-  background-color: #4D96A9;
-}
-.button__cyan:hover {
-  background-color: #71C0D4;
 }
 
 .section-number {
@@ -232,18 +244,6 @@ header {
   margin: 0;
   bottom: -2rem;
   z-index: 2;
-}
-
-footer {
-  color: white;
-  background-image: linear-gradient(rgba(77, 151, 169, 0.8705882353), rgba(77, 151, 169, 0.8705882353)), url("../../assets/mobile/image-footer.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: var(--space-3xl) var(--space-xl);
-  position: relative;
-}
-footer p {
-  color: #FAFAFA;
 }
 
 .flow > * + * {

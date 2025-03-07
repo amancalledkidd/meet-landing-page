@@ -1,0 +1,33 @@
+@use '../variables' as *;
+
+.button {
+    font-size: var(--step-1);
+    font-weight: 700;
+    color: $clr-white;
+    border: none;
+    border-radius: 29px;
+    padding: var(--space-m) var(--space-2xl);
+    margin: var(--space-2xs);
+
+    &:active {
+        transform: scale(0.95);
+      }
+
+    &__purple {
+        @extend .button;
+        background-color: $clr-purple-600;
+
+        &:hover {
+            background-color: #B18BDD;
+        }
+    }
+
+    &__cyan {
+        @extend .button;
+        background-color: $clr-cyan-600;
+
+        &:hover {
+            background-color: #71C0D4;
+        }
+    }
+}
