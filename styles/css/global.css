@@ -133,6 +133,7 @@ h1 {
 h2 {
   font-size: var(--step-4);
   font-weight: 800;
+  --flow-space: 0.5em ;
 }
 
 p {
@@ -146,24 +147,54 @@ header {
   justify-content: center;
   align-items: flex-end;
   margin-top: var(--space-3xl);
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: var(--space-s);
   margin: 4rem 0;
+  justify-items: center;
 }
 .image-grid img {
   border-radius: 8px;
 }
 
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter, var(--space-s));
-  justify-content: var(--cluster-horizontal-alignment, flex-start);
-  align-items: var(--cluster-vertical-alignment, center);
+.article {
+  margin: auto;
+  width: clamp(10rem, 100%, 30rem);
+}
+
+@media (min-width: 768px) {
+  .cluster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: flex-start;
+    --flow-space: 0;
+  }
+  .cluster .footer-title {
+    margin: 0;
+    justify-self: center;
+  }
+  .cluster p {
+    align-self: center;
+  }
+  .cluster .button, .cluster .button__cyan, .cluster .button__purple {
+    justify-self: center;
+    align-self: center;
+  }
 }
 
 .button, .button__cyan, .button__purple {
@@ -181,8 +212,14 @@ header {
 .button__purple {
   background-color: #855FB1;
 }
+.button__purple:hover {
+  background-color: #B18BDD;
+}
 .button__cyan {
   background-color: #4D96A9;
+}
+.button__cyan:hover {
+  background-color: #71C0D4;
 }
 
 .section-number {
@@ -202,7 +239,7 @@ footer {
   background-image: linear-gradient(rgba(77, 151, 169, 0.8705882353), rgba(77, 151, 169, 0.8705882353)), url("../../assets/mobile/image-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: var(--space-3xl) var(--space-l);
+  padding: var(--space-3xl) var(--space-xl);
   position: relative;
 }
 footer p {
@@ -210,7 +247,7 @@ footer p {
 }
 
 .flow > * + * {
-  margin-top: var(--flow-space, 1em);
+  margin-top: var(--flow-space, 1.5em);
 }
 
 .lt-purple {
@@ -222,7 +259,7 @@ footer p {
 }
 
 .wrapper {
-  padding: var(--step-5);
+  padding: var(--space-l);
   position: relative;
 }
 

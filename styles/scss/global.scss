@@ -50,6 +50,7 @@ h1 {
 h2 {
     font-size: var(--step-4);
     font-weight: 800;
+    --flow-space: 0.5em
 }
 
 p {
@@ -63,29 +64,63 @@ header {
     justify-content: center;
     align-items: flex-end;
     margin-top: var(--space-3xl);
+    margin-bottom: var(--space-xl);
 }
 
 
 // Composition
 
+.hero {
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
 
 .image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: var(--space-s);
     margin: $spacing-800 0;
+    justify-items: center;
 
     img {
         border-radius: 8px
     }
 }
 
+.article {
+    margin: auto;
+    width: clamp(10rem, 100%, 30rem);
+}
+
 .cluster {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gutter, var(--space-s));
-    justify-content: var(--cluster-horizontal-alignment, flex-start);
-    align-items: var(--cluster-vertical-alignment, center);
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+        // text-align: left;
+        justify-items: center;
+        align-items: flex-start;
+        --flow-space: 0;
+
+        .footer-title {
+            margin: 0;
+            justify-self: center;
+        }
+        p {
+            align-self: center;
+        }
+
+        .button {
+            justify-self: center;
+            align-self: center;
+        }
+    }
+    
 }
 
 // Block
@@ -105,11 +140,19 @@ header {
     &__purple {
         @extend .button;
         background-color: $clr-purple-600;
+
+        &:hover {
+            background-color: #B18BDD;
+        }
     }
 
     &__cyan {
         @extend .button;
         background-color: $clr-cyan-600;
+
+        &:hover {
+            background-color: #71C0D4;
+        }
     }
 }
 
@@ -130,18 +173,19 @@ footer {
     background-image: linear-gradient(#4d97a9de, #4d97a9de), url('../../assets/mobile/image-footer.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: var(--space-3xl) var(--space-l);
+    padding: var(--space-3xl) var(--space-xl);
     position: relative;
 
     p {
         color: $clr-white;
     }
+
 }
 
 // Utilities 
 
 .flow > * + * {
-    margin-top: var(--flow-space, 1em);
+    margin-top: var(--flow-space, 1.5em);
 }
 .lt-purple {
     color: $clr-purple-300;
@@ -152,7 +196,7 @@ footer {
 }
 
 .wrapper {
-    padding: var(--step-5);
+    padding: var(--space-l);
     position: relative;
 }
 
